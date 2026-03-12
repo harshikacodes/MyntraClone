@@ -1,3 +1,5 @@
+import "./style.css";
+
 function Card(props){
   return (
     <div style={{border:"2px solid black", padding:"2px"}}>
@@ -8,6 +10,26 @@ function Card(props){
         <h2>Shop Now</h2>
       </div>
     </div>
+  );
+}
+
+function Header(){
+  return (
+    <div className="heading">
+    <img src="" />
+    <div className="option">
+      <button>MEN</button>
+      <button>WOMEN</button>
+      <button>KIDS</button>
+      <button>HOME</button>
+      <button>BEAUTY</button>
+      <button>GENZ</button>
+      <button>STUDIO</button>
+    </div>
+
+    <input></input>
+
+  </div>
   );
 }
 
@@ -22,12 +44,12 @@ const arr = [
 
 function App() {
   return (
-    // header
-    // body
+    <>
+    <Header />
     <div style={{display:"flex", gap:"10px", flexWrap:"wrap"}}>
       {arr.map((value, index) => <Card key={index} category={value.category} offer={value.offer} />)}
     </div>
-    // footer
+    </>
   );
 }
 
