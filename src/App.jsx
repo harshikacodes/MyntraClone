@@ -2,7 +2,7 @@ import "./style.css";
 
 function Card(props){
   return (
-    <div style={{border:"2px solid black", padding:"2px"}}>
+    <div className="categoryCard">
       <img src="https://yufta.com/cdn/shop/articles/blue_dupatta_set.jpg?v=1647416059" height="200px" width="200px" />
       <div style={{textAlign:"center"}}>
         <h2>{props.category}</h2>
@@ -16,18 +16,24 @@ function Card(props){
 function Header(){
   return (
     <div className="heading">
-    <img src="" />
+    <img src="https://images.indianexpress.com/2021/01/myntra.png" height="60px" width="120px" />
     <div className="option">
-      <button>MEN</button>
-      <button>WOMEN</button>
-      <button>KIDS</button>
-      <button>HOME</button>
-      <button>BEAUTY</button>
-      <button>GENZ</button>
-      <button>STUDIO</button>
+      <button className="btn">MEN</button>
+      <button className="btn">WOMEN</button>
+      <button className="btn">KIDS</button>
+      <button className="btn">HOME</button>
+      <button className="btn">BEAUTY</button>
+      <button className="btn">GENZ</button>
+      <button className="btn">STUDIO</button>
     </div>
 
-    <input></input>
+    <input className="searchBar" placeholder="Search for products, brands and more"></input>
+
+    <div className="profile">
+      <button className="profileBtn">Profile</button>
+      <button className="profileBtn">Wishlist</button>
+      <button className="profileBtn">Bag</button>
+    </div>
 
   </div>
   );
@@ -46,7 +52,7 @@ function App() {
   return (
     <>
     <Header />
-    <div style={{display:"flex", gap:"10px", flexWrap:"wrap"}}>
+    <div className="categoryCardsContainer">
       {arr.map((value, index) => <Card key={index} category={value.category} offer={value.offer} />)}
     </div>
     </>

@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn, .profileBtn{
+    margin-right: 20px;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+    color: #282C3F;
+    cursor: pointer;
+}
+
+.searchBar{
+    width: 500px;
+    height: 40px;
+    border: none;
+    background-color: #F5F5F6;
+    padding-left: 15px;
+}
+
+.categoryCardsContainer {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.categoryCard {
+    background-color: #A632E6;
+    padding: 2px;
+    color: white;
+}
